@@ -22,7 +22,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    @btask = Task.find(params[:id])
+    @task = Task.find(params[:id])
     if @task.update(task_params)
       redirect_to tasks_path, notice: "タスクを編集しました"
     else
