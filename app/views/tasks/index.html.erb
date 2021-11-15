@@ -9,5 +9,6 @@
     <td><%= task.title %></td>
     <td><%= task.content %></td>
   </tr>
+  <%= link_to '削除', task_path(task.id), method: :delete %>
 <% end %>
 </table>
