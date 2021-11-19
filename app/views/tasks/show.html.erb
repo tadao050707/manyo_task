@@ -1,4 +1,4 @@
-<div>タスク名：<%= @task.title %></div>
-<div>タスクの詳細：<%= @task.content %></div>
+<div><%= t('view.task.title') %>：<%= @task.title %></div>
+<div><%= t('view.task.detail') %>：<%= @task.content %></div>
 
 <div><%= link_to 'タスク一覧へ', tasks_path %></div>
