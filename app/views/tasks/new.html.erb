@@ -1,0 +1,19 @@
+<%= form_with(model: Task.new, local: true) do |form| %>
+  <% if @task.errors.any? %>
+    <ul id="error_explanation">
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  
+  <div class="task_title">
+    <%= form.label :title, 'タスク名' %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="task_content">
+    <%= form.label :content, '詳細' %>
+    <%= form.text_field :content %>
+  </div>
+  <%= form.submit %>
+<% end %>
