@@ -4,17 +4,17 @@ RSpec.describe 'タスク管理機能', type: :system do
     context 'タスクを新規作成した場合' do
       it '作成したタスクが表示される' do
 				visit new_task_path
-				fill_in 'タスク名', with: 'テストタスク名'
-				fill_in '詳細', with: 'テスト詳細'
+				fill_in 'タスク名', with: '洗濯をする'
+				fill_in '詳細', with: 'ふとんを選択する'
 				click_on 'Create Task'
 				click_link '詳細'
-				expect(page).to have_content 'テストタスク名'
-				expect(page).to have_content 'テスト詳細'
+				expect(page).to have_content '洗濯をする'
+				expect(page).to have_content 'ふとんを選択する'
       end
     end
   end
 
-	describe '一覧表示機能' do
+    describe '一覧表示機能' do
 		context '一覧画面に遷移した場合' do
 			it '作成済みのタスク一覧が表示される' do
 				# テストで使用するためのtaskを作成。titleの値をオーバーライド。
