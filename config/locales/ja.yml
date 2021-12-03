@@ -1,0 +1,9 @@
+ja:
+  view:
+    task:
+      index: タスク一覧
+      title: タスク名
+      detail: 詳細
+      update: 編集
+      delete: 削除
+      register: 登録

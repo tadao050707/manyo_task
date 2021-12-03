@@ -8,11 +8,11 @@
   <% end %>
   
   <div class="task_title">
-    <%= form.label :title, 'タスク名' %>
+    <%= form.label :title, t('view.task.title') %>
     <%= form.text_field :title %>
   </div>
   <div class="task_content">
-    <%= form.label :content, '詳細' %>
+    <%= form.label :content, t('view.task.detail') %>
     <%= form.text_field :content %>
   </div>
   <%= form.submit %>
